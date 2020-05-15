@@ -10,7 +10,7 @@
 # pacman::p_load(pacman,janitor,readr,gmodels,dplyr,tidyr,plyr,ggplot2,hrbrthemes,ggcorrplot,magrittr,pdftools,corrgram)
 
 ################################################################ Part 1: makeCacheMatrix ############################
-
+#Function based on example provided @ https://github.com/rdpeng/ProgrammingAssignment2
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
   set <- function(y) {
@@ -26,11 +26,10 @@ makeCacheMatrix <- function(x = matrix()) {
        getInverse = getInverse)
 }
 
-
 ################################################################ Part 2: cacheSolve #################################
-
+#Function based on example provided @ https://github.com/rdpeng/ProgrammingAssignment2
 cacheSolve <- function(x, ...) {
-  ## Return a matrix that is the inverse of 'x'
+
   inv <- x$getInverse()
   if (!is.null(inv)) {
     message("getting cached data")
@@ -42,4 +41,3 @@ cacheSolve <- function(x, ...) {
   inv
 }
 
-############################################################## Test Functions ###################################################
